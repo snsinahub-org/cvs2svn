@@ -28,10 +28,10 @@ RUN apt-get update && \
         vim
 
 RUN mkdir /src
-RUN ls -l
 WORKDIR /src
 RUN cd ..
 COPY . .
+RUN ls -l
 RUN ${PYTHON} ./setup.py install
 
 # The CVS repository can be mounted here:
