@@ -30,6 +30,7 @@ RUN apt-get update && \
 RUN mkdir /src
 RUN ls -l
 WORKDIR /src
+RUN cd ..
 COPY . .
 RUN ${PYTHON} ./setup.py install
 
