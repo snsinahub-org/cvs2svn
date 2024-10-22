@@ -41,7 +41,7 @@ VOLUME ["/cvs"]
 
 # A volume for storing temporary files can be mounted here:
 VOLUME ["/tmp"]
-RUN ./run-tests.py
+CMD ["python", "./run_tests.py"]
 # ENTRYPOINT ["./run-tests.py"]
 
 
