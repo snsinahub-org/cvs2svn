@@ -15,7 +15,7 @@
 # to make an image for testing cvs2svn and to run those tests using
 # the image.
 
-FROM python:2 AS run
+FROM python:2.7 AS run
 
 RUN cat /etc/apt/sources.list
 RUN apt-get update && \
