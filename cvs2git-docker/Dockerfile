@@ -34,7 +34,7 @@ COPY . .
 RUN ls -l
 RUN ${PYTHON} ./setup.py install
 
-RUN ./run-test.py
+RUN ./run-tests.py
 
 # The CVS repository can be mounted here:
 VOLUME ["/cvs"]
