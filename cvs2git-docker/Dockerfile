@@ -43,6 +43,7 @@ VOLUME ["/cvs"]
 # A volume for storing temporary files can be mounted here:
 VOLUME ["/tmp"]
 RUN ln -s /tmp cvs2svn-tmp
+RUN ${PYTHON} ./run-tests.py list
 RUN ${PYTHON} ./run-tests.py
 # CMD ["python", "./run_tests.py"]
 # ENTRYPOINT ["./run-tests.py"]
