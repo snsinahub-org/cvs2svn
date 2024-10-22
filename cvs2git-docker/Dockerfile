@@ -33,6 +33,7 @@ RUN cd ..
 COPY . .
 RUN ls -l
 RUN ${PYTHON} ./setup.py install
+RUN ${PYTHON} ./run_tests.py
 
 
 
@@ -41,7 +42,7 @@ VOLUME ["/cvs"]
 
 # A volume for storing temporary files can be mounted here:
 VOLUME ["/tmp"]
-RUN ${PYTHON} ./run_tests.py
+# RUN ${PYTHON} ./run_tests.py
 # CMD ["python", "./run_tests.py"]
 # ENTRYPOINT ["./run-tests.py"]
 
