@@ -33,7 +33,7 @@ RUN cd ..
 COPY . .
 RUN ls -l
 RUN ${PYTHON} ./setup.py install
-RUN ${PYTHON} ./run_tests.py
+RUN python ./run_tests.py
 
 
 
