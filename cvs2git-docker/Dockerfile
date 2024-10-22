@@ -34,13 +34,15 @@ COPY . .
 RUN ls -l
 RUN ${PYTHON} ./setup.py install
 
-RUN ./run-tests.py
+# RUN ./run-tests.py
 
 # The CVS repository can be mounted here:
 VOLUME ["/cvs"]
 
 # A volume for storing temporary files can be mounted here:
 VOLUME ["/tmp"]
+
+ENTRYPOINT ["./run-tests.py"]
 
 
 
